@@ -11,5 +11,7 @@ RUN docker-php-ext-install mcrypt xsl intl zip
 
 RUN docker-php-ext-install bcmath soap 
 
+RUN chown -R www-data:www-data /var/www
+
 EXPOSE 9000
 CMD ["php-fpm"]
